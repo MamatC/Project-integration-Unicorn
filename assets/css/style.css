@@ -1,0 +1,257 @@
+body{
+    margin: 0;
+    background-color: var(--gray-light);
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+:root {
+    --black: #181818;
+    --white: #ffffff;
+    --gray: #eeeeee;
+    --gray-light: #fbfbfb;
+    --font-body: 'PT Sans', sans-serif;
+    --font-title: 'Libre Baskerville', serif;
+}
+h1, h2{
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+/* 1er container qui donne les marges exterieurs */
+.container{
+    width: 90%;
+    margin: auto;
+}
+/* NAV */
+
+/* aligner logo + burger et ecarter les 2 */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+/* suppression menu de navigation du pc */
+.menu-nav{
+    display: none;
+}
+
+/* SECTION 1 UNICORN */
+
+/* centrer dans la div */
+.center{
+    text-align: center;
+    padding-top: 40px;
+}
+/* ajustement photo unicorn */
+.photo-uni{
+    width:80%;
+    margin-top: 20%;
+    margin-bottom: 40%;
+}
+
+/* SECTION 2 CUBE */
+
+.cube{
+    width: 100%;
+    border-radius: 5px;
+}
+/* suppression photo cube  pour pc plus grande */
+.cube-pc{
+    display: none;
+}
+
+/* SECTION 3 ETOILE */
+
+.etoile{
+    width: 100%;
+    border-radius: 5px;
+}
+/* suppresion photo etoile pour pc */
+.etoile-pc{
+    display: none;
+}
+/* parametre du bouton */
+.btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--gray-light);
+    border: 1px solid;
+    color: black;
+    border-radius: 3px;
+    padding: 10px 0 10px 0;
+    width: 100%;
+}
+
+/* SECTION 4 JOURNAL */
+
+/* 2eme container qui apporte le fond gris */
+.container2{
+    background-color: var(--gray);
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+}
+
+/* ajustement photo unicorn avec journal */
+.newspaper{
+    width: 90%;
+    border-radius: 5px;
+    padding: 20px 0px 50px 10px;
+}
+/* ajustement taille et espacement du h2 */
+.interligne{
+    padding-left: 15px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.8em;
+    line-height: 60%;
+}
+/* parametre 2eme bouton */
+.btn2{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--black);
+    color:var(--gray-light);
+    border-radius: 3px;
+    width: 90%;
+    padding: 10px 0 10px 0;
+    margin: auto;
+}
+
+/* FOOTER */
+
+/* display grid pour créer une grille (tableau) pour l'alignement */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap:10px;
+    }
+      
+footer a{
+    border: 1px solid var(--gray);
+    padding: 5px 35px;
+}
+
+@media screen and (min-width: 415px){
+
+    /* MODE PC */
+
+    .container{
+        width: 70%;
+    }
+    /* NAV */
+
+   .menu{
+       display: none;
+   }
+   .menu-nav a{
+       text-decoration: none;
+       color: black;
+
+   }
+   .menu-nav{
+       display: flex;
+       gap: 30px;
+       margin-right: 5%;
+   }
+
+   /* SECTION 1 UNICORN */
+
+   h1{
+       font-size: 3.5em;
+   }
+   .p{
+       font-size: 1.5em;
+    }
+
+    /* SECTION 2 CUBE */
+
+   .photo-uni{
+        width:50%;
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+
+    .cube{
+        display: none;
+    }
+    .cube-pc{
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+    .p-cube{
+        width: 25%;
+        text-align: left;
+        transform: translateY(-130%) translateX(10%);
+    }
+    .center2{
+        text-align: center;
+    }
+
+    /* SECTION 3 ETOILE */
+
+    .etoile{
+        display: none;
+    }
+    .etoile-pc{
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    /* SECTION 4 JOURNAL */
+
+    .btn{
+        display: none;
+    }
+    .btn2{
+        display: inline;
+        padding: 10px 30px;
+        margin: 10px 0px 50px 10px;
+    }
+    .newspaper{
+        width: 50%;
+    }
+    .container2{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+
+        
+    }
+    .interligne{
+        font-size: 1.8em;
+    }
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 20px ;
+        }
+          
+    footer a{
+        border: none;
+        padding: 5px 15px;
+    }
+    footer a img{
+        width: 200%;
+    }
+
+}
+
+
+
+
